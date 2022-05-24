@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      li {
+        padding-left: 20px;
+      }
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-family: "Roboto", sans-serif;
+      }
+      p {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="h-32 bg-navbar flex flex-row">
+      <div class="h-32 ml-7 w-fit">
+        <img class="h-full" src="img/Negative.svg" alt="" />
+      </div>
+      <div class="w-2/3 hidden xl:block">
+        <div class="flex flex-col text-white items-end p-5 font-bold">
+          <nav>Compare the Market</nav>
+          <div class="md:mt-6 hidden lg:block">
+            <ul class="flex flex-row f">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Articles</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Tools</a></li>
+              <li><a href="#">Quizzes</a></li>
+              <li><a href="#">Authors</a></li>
+              <li><a href="#">Videos</a></li>
+              <li><a href="#">About us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="mx-14 mt-32 rounded-lg overflow-hidden">
+      <img src="img/16x9.webp" alt="" />
+    </div>
+
+    <div class="px-14 mt-5">
+      <div>
+        <h2 class="md:text-6xl text-4xl">Interactive Article Test</h2>
+        <div class="flex flex-row mt-3">
+          <div class="w-12 h-12 rounded-full overflow-hidden">
+            <img class="" src="img/user.webp" alt="" />
+          </div>
+
+          <div class="ml-3">
+            <p>Andrew Woodhouse</p>
+            <span>4th February 2022 12 min read</span>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </div>
+
+    <section class="container mx-auto xl:px-60 px-9 mt-4 leading-8">
+      <div>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="mt-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="mt-3 text-center text-navbar">
+        <h2 class="text-4xl">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </h2>
+        <span class="text-2-1">Test Person</span>
+      </div>
+      <div class="mt-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="mt-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div>
+        <div
+          class="w-full h-[210px] cursor-pointer"
+          x-data="{ visible: true }"
+          @scroll.window="visible = (window.pageYOffset > 1550) ? false : true"
+        >
+          <div
+            class="relative flex flex-col justify-end shadow-3xl my-preserve w-full h-full duration-1000"
+            :class="visible ? 'my-perspective-180' : 'my-rotate-180'"
+            @click="visible= true"
+          >
+            <div
+              class="absolute my-preserve backface-visibility w-full flex flex-col text-center"
+            >
+              <div class="font-bold mb-16">
+                <h2 class="text-navbar text-4xl">Flip Card Test! Try It?</h2>
+                <button class="mt-4 bg-navbar text-xl text-textbtn p-2 rounded">
+                  Click Me!
+                </button>
+              </div>
+              <img src="img/footerdiv.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="absolute p-5 backface-visibility text-center overflow-hidden my-rotate-180 w-full h-full"
+              @click.outside="visible = false"
+            >
+              <p class="lg:text-lg text-xs">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="mt-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div class="mt-4">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <p class="mt-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+      <div>
+        <div
+          class="my-3 w-full m-auto shadow-3xl p-5"
+          x-data="{ activeSlide: 1, slides: [1, 2, 3] }"
+        >
+          <div class="relative">
+            <!-- Slides -->
+            <div x-show="activeSlide === 1">
+              <div>
+                <p class="text-2xl">
+                  If The Water In Your Radiator Runs Low, Your Insurer Could
+                  Have Grounds To Refuse A Claim.
+                </p>
+              </div>
+              <div
+                class=""
+                x-data="{ active:false,
+                  result:false,
+                  modelValue:true,
+                  lists:[
+                  { id: 1, name: 'Red',   isCheckd:false,isTrue:true,result:false,colorCeck:false },
+                  { id: 2, name: 'Orange',isCheckd:false,isTrue:false,result:false,colorCeck:false },
+                  { id: 3, name: 'Yellow',isCheckd:false,isTrue:false,result:false,colorCeck:false },
+              ],
+              calceResult:function(){
+                console.log(this.lists)
+              for(let i = 0 ; i < this.lists.length ; i++){
+                console.log(this.lists[i])
+                if(this.lists[i].isCheckd == this.lists[i].isTrue){
+                  this.lists[i].result=true
+                }else{
+                  this.lists[i].result=false
+                }
+                if(this.lists[i].result == this.lists[i].isTrue){
+                  this.lists[i].colorCeck = true
+                }
+              }
+              }
+                  } "
+              >
+                <span x-text="JSON.stringify(lists)"></span>
+                <div class="flex flex-row">
+                  <template x-for="list in lists">
+                    <div>
+                      <input
+                        x-model="list.isCheckd"
+                        type="checkbox"
+                        class="bg-slate-300 hover:bg-slate-400 cursor-pointer h-5 w-5 mt-1 mr-5 rounded-full"
+                      />
+                      <span
+                        :class="list.colorCeck ? 'bg-slate-500' : ' bg-lime-600'"
+                        >kkkkkk</span
+                      >
+                      <span x-text="list.name"> </span>
+                    </div>
+                  </template>
+                </div>
+
+                <br />
+                <button x-on:click="calceResult">result</button>
+                <p>result:<span x-text="result"></span></p>
+              </div>
+            </div>
+            <div x-show="activeSlide === 2">22</div>
+            <div x-show="activeSlide === 3">33</div>
+            <!-- Prev/Next arrow buttons -->
+            <div class="box flex flex-row justify-between">
+              <button
+                class="b-0 unrounded btn-icon bg-color-transparent cursor-pointer"
+                x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1"
+              >
+                back
+              </button>
+              <button
+                class="b-0 unrounded btn-icon bg-color-transparent cursor-pointer"
+                x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1"
+              >
+                next
+              </button>
+            </div>
+          </div>
+          <!-- Indicator buttons -->
+          <div class="flex flex-center px-3">
+            <template x-for="slide in slides" :key="slide">
+              <button
+                style="width: 2rem; height: 1rem"
+                class="rounded-pill b-thin mx-1 cursor-pointer"
+                :class="{
+                'bg-color-success': activeSlide === slide,
+                '': activeSlide !== slide
+              }"
+                x-on:click="activeSlide = slide"
+              ></button>
+            </template>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      defer
+      src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </body>
+</html>

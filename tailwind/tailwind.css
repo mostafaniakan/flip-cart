@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .my-rotate-180 {
+    transform: rotateY(180deg);
+    perspective: 23rem;
+  }
+  
+  .my-preserve {
+    transform-style: preserve-3d;
+  }
+  .perspective {
+    perspective: "1000px";
+  }
+  .backface-visibility {
+    backface-visibility: hidden;
+  }
+}
